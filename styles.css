@@ -677,10 +677,10 @@ button {
 
 .gallery-thumbs {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
   width: 100%;
-  max-width: 960px;
+  max-width: 1120px;
   margin-inline: auto;
 }
 .thumb {
@@ -1066,6 +1066,9 @@ button {
   }
   .download-panel {
     grid-template-columns: 1fr;
+  }
+  .gallery-thumbs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .install {
     border-inline-start: 0;

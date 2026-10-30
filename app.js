@@ -56,6 +56,7 @@
     var titleEl = gallery.querySelector("[data-gallery-title]");
     var captionEl = gallery.querySelector("[data-gallery-caption]");
     var indexEl = gallery.querySelector("[data-gallery-index]");
+    var totalEl = gallery.querySelector("[data-gallery-total]");
     var thumbs = Array.prototype.slice.call(gallery.querySelectorAll(".thumb"));
     var persianDigits = "۰۱۲۳۴۵۶۷۸۹";
     var swapToken = 0;
@@ -65,6 +66,8 @@
         return persianDigits[Number(digit)];
       });
     }
+
+    if (totalEl) totalEl.textContent = toPersian(thumbs.length);
 
     function selectThumb(button) {
       if (button.classList.contains("is-active")) return;
